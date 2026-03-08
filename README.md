@@ -1,69 +1,69 @@
 # 💳 PayPal Balance Changer
 
-Extensão que permite alterar o saldo exibido no site do PayPal para um valor personalizado.
+A browser extension that allows you to change the displayed balance on PayPal's website to any custom value.
 
-## ✨ Funcionalidades
+## ✨ Features
 
-- Altera o valor do saldo exibido na interface do PayPal
-- Interface simples para inserir o valor desejado
-- Mantém o valor alterado mesmo com navegação no site
-- Não interfere com outras funcionalidades do PayPal
+- Changes the displayed balance value in PayPal's interface
+- Simple interface to enter your desired value
+- Maintains the custom value even with site navigation
+- Does not interfere with other PayPal functionalities
 
-## 📦 Instalação
+## 📦 Installation
 
-1. Baixe os arquivos da extensão
-2. Abra o Google Chrome e acesse `chrome://extensions/`
-3. Ative o **Modo do desenvolvedor** (canto superior direito)
-4. Clique em **Carregar sem compactação**
-5. Selecione a pasta onde salvou os arquivos da extensão
+1. Download the extension files
+2. Open your browser and go to `about:extensions`
+3. Enable **Developer mode** (top right corner)
+4. Click **Load unpacked**
+5. Select the folder where you saved the extension files
 
-## 🚀 Como Usar
+## 🚀 How to Use
 
-1. Acesse o site do PayPal
-2. Clique no ícone da extensão na barra do Chrome
-3. Digite o valor desejado (ex: `1.250,00`)
-4. Clique em **Aplicar**
-5. A página recarrega automaticamente e o saldo exibido será alterado
+1. Go to the PayPal website
+2. Click the extension icon in the browser toolbar
+3. Enter your desired value (e.g., `1,250.00`)
+4. Click **Apply**
+5. The page automatically reloads and the displayed balance will be changed
 
-## 📁 Arquivos da Extensão
+## 📁 Extension Files
 
-| Arquivo | Descrição |
+| File | Description |
 |---|---|
-| `manifest.json` | Configuração da extensão (Manifest V3) |
-| `content.js` | Script que injeta no PayPal e altera o saldo |
-| `popup.html` | Interface do popup para inserir o valor |
-| `popup.js` | Lógica do popup (salva valor e recarrega página) |
-| `icon.png` | Ícone da extensão |
+| `manifest.json` | Extension configuration (Manifest V3) |
+| `content.js` | Script that injects into PayPal and changes the balance |
+| `popup.html` | Popup interface for entering the value |
+| `popup.js` | Popup logic (saves value and reloads page) |
+| `icon.png` | Extension icon |
 
-## 🔧 Como Funciona
+## 🔧 How It Works
 
-A extensão utiliza um `MutationObserver` para detectar quando o PayPal renderiza o elemento do saldo e o substitui pelo valor personalizado. O observer é cirúrgico e afeta apenas o elemento do saldo, sem interferir com outras interações do site.
+The extension uses a `MutationObserver` to detect when PayPal renders the balance element and replaces it with the custom value. The observer is surgical and only affects the balance element, without interfering with other site interactions.
 
-## 🔐 Permissões
+## 🔐 Permissions
 
-- `storage`: Para salvar o valor personalizado
-- `activeTab`: Para recarregar a aba após aplicar o valor
-- `scripting`: Para injetar o content script
-- `host_permissions`: Para funcionar em páginas do PayPal
+- `storage`: To save the custom value
+- `activeTab`: To reload the tab after applying the value
+- `scripting`: To inject the content script
+- `host_permissions`: To work on PayPal pages
 
-## 🌍 Compatibilidade
+## 🌍 Compatibility
 
-- Qualquer site do PayPal (paypal.com)
+- Any PayPal website (paypal.com)
 
-## ⚠️ Notas
+## ⚠️ Notes
 
-- A alteração é apenas visual e não afeta o saldo real da conta
-- O valor é salvo localmente no navegador
-- A extensão funciona mesmo com navegação dentro do PayPal
+- The change is visual only and does not affect the real account balance
+- The value is saved locally in the browser
+- The extension works even with navigation within PayPal
 
-## 🛠️ Desenvolvimento
+## 🛠️ Development
 
-Para modificar a extensão:
+To modify the extension:
 
-1. Edite os arquivos desejados
-2. Recarregue a extensão em `chrome://extensions/`
-3. Teste as alterações no site do PayPal
+1. Edit the desired files
+2. Reload the extension in `about:extensions`
+3. Test the changes on the PayPal website
 
-## 📜 Licença
+## 📜 License
 
-Este projeto é open-source e pode ser usado, modificado e distribuído livremente sob os termos da licença MIT.
+This project is open-source and can be used, modified, and distributed freely under the terms of the MIT license.
