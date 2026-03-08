@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "PayPal Balance Changer",
+  "version": "1.0",
+  "author": "akiralofy",
+  "description": "Altera o saldo exibido no PayPal",
+  "permissions": ["storage", "activeTab", "scripting"],
+  "host_permissions": ["*://*.paypal.com/*"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.paypal.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
